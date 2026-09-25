@@ -13,8 +13,19 @@ regresión (exit 1), está en verde (exit 0) o su dataset es inválido (exit 2).
 ## Demo
 
 ```
-$ bench-runner --replay cassettes/ --mode full
-{ "total": 4, "passed": 4, "pass_rate": 1.0, "threshold_ok": true, "cost_usd": "0.0" }
+$ uv run bench-runner --replay cassettes/ --mode full
+{
+  "prompt_id": "regression-report-generator",
+  "prompt_version": "0.1.0",
+  "mode": "full",
+  "threshold": 1.0,
+  "total": 4,
+  "passed": 4,
+  "pass_rate": 1.0,
+  "threshold_ok": true,
+  "cost_usd": "0",
+  …
+}
 $ echo $?
 0
 ```
